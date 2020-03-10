@@ -109,6 +109,13 @@ header > .header-left-list , .header-right-list , .logo {
 .header-left-list li , .header-right-list li {
     margin: 15px;
 }
+.close-header-list {
+    display: none;
+}
+
+.header-phone-List-close {
+    display: none;
+}
 
 .bar {
     display: none;
@@ -294,6 +301,11 @@ footer {
         font-weight: bold;
     }
 
+    .container {
+        width: 1024px;
+        margin: 0 auto;
+    }
+
 
     .Product-list a {
         font-size: 23px;
@@ -337,22 +349,55 @@ footer {
 
 /* for ipad - 768 px */
 
-
 @media screen and (max-width: 768px) {
     header {
         position: relative;
     }
 
+    .header-phone-List-open{
+        display: block;
+    }
+
+    .show-header-list {
+        z-index: 10;
+        text-align: center;
+        position: absolute;
+        top: 90px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: block;
+    }    
+
+    .show-header-list li {
+        transform: translateX(-1%);
+        margin-bottom: 60px;
+    }
+
+    .show-header-list li:last-child {
+        margin-bottom: 0;
+    }  
+
+
     .header-left-list , .header-right-list {
         display: none;
     }
 
-    .col-md-3:not(:last-child) {
-        margin-right: 30px;
+    .logo {
+        width: 100%;
+        text-align: center;
     }
 
-    .col-md-3.test {
+    .col-md-3 {
+        width: calc((100% - 60px) / 2);
+        text-align: center;
+    }
+
+    .row:first-child {
         margin-right: 0;
+    }
+
+    .col-md-3:not(:last-child) {
+        margin-right: 30px;
     }
 
     .slider, footer {
@@ -378,5 +423,8 @@ footer {
     .cart {
         display: block;
     }
-
 }
+
+/* for iphone 6/7/8 375px  */
+
+  
